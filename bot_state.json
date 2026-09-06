@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "savedAt": 1775278108568,
+  "orders": {},
+  "userLastOrder": {},
+  "userStats": {
+    "1495067875": {
+      "menuOpen": 0,
+      "previewOpen": 0,
+      "buyIntent": 0,
+      "paid": 0,
+      "expired": 0,
+      "revenue": 0,
+      "lastSeen": 1775278079102
+    }
+  },
+  "processedWebhookAt": {},
+  "metrics": {
+    "menuOpen": 0,
+    "previewOpen": 0,
+    "buyIntent": 0,
+    "paid": 0,
+    "expired": 0,
+    "revenue": 0
+  }
+}
