@@ -1,5 +1,5 @@
 entrypoint = "index.js"
-modules = ["nodejs-22", "postgresql-16"]
+modules = ["nodejs-22", "postgresql-16", "python-base-3.13"]
 hidden = [".config", "package-lock.json"]
 
 [gitHubImport]
