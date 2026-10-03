@@ -1,0 +1,170 @@
+thưa Bệ Hạ, Đầy tớ viết sẵn cho Bệ Hạ một prompt đủ mạnh để đưa thẳng cho AI code đây:
+
+```text
+You are a senior Telegram bot engineer and product-minded full-stack developer.
+
+I have an existing Telegram bot for selling movie content. The current UI is already working and must be preserved in spirit, but I need a major upgrade focused on admin control, scalability, and live content management.
+
+Your task:
+Refactor and extend the bot so it becomes a production-ready system with a secure admin panel, dynamic content management, analytics, and editable buyer-facing screens without requiring code changes or redeployment.
+
+CORE REQUIREMENTS
+
+1) Secure Admin Access
+- Add an admin command and/or admin entry point such as /admin or an admin button.
+- Access to the admin interface must be restricted strictly by Telegram user ID.
+- The admin ID must come from an environment variable called ADMIN_CHAT_ID that is already set before runtime.
+- No other user can access the admin dashboard, even if they know the command.
+- If a non-admin tries to access it, show a polite access denied message.
+- This must be enforced both on the UI layer and in the backend logic.
+
+2) Admin Dashboard / Control Panel
+Create a clean admin panel where the admin can:
+- View total revenue.
+- View total number of successful purchases.
+- View sales count by movie, by episode, and by button/item.
+- View top-selling items.
+- View today / 7 days / 30 days revenue.
+- View key metrics such as:
+  - total users
+  - active buyers
+  - conversion rate
+  - number of available movies
+  - number of episodes/items per movie
+  - inventory or content status if relevant
+- Make the analytics easy to read and well organized.
+- Use inline buttons and pagination where necessary.
+
+3) Dynamic Movie Menu Management
+The current static buttons like “Phim #132” and “Phim #134” are not enough.
+Admin must be able to:
+- Add new movie buttons.
+- Edit existing movie buttons.
+- Delete movie buttons.
+- Reorder buttons.
+- Change button labels freely.
+- Create unlimited movie entries and many episodes per movie.
+- Support a scalable structure so future updates do not require code changes.
+
+Important:
+- The movie list must be dynamic from database or persistent storage.
+- The bot should not hardcode movie buttons in source code.
+- Admin should be able to manage all movies and episodes directly from the admin UI.
+
+4) Editable Buyer-Facing Text
+The “Buy Now” screen currently contains title/description text.
+Admin must be able to:
+- Edit the title text shown on the purchase screen.
+- Edit the description / promotional text shown on the purchase screen.
+- Edit the text shown in movie detail pages.
+- Save changes instantly and apply them to the live bot without redeploying or editing source code.
+
+This should include all important labels or captions used in the buyer flow.
+
+5) Video Management
+Admin must be able to manage the video shown in the purchase flow.
+Implement full CRUD support:
+- Add video
+- Replace video
+- Edit metadata
+- Delete video
+- Attach one or multiple videos to a movie or episode if needed
+
+The bot should support storing Telegram file_id or another efficient media reference so uploads do not need to be repeated unnecessarily.
+
+6) Price Management
+Admin must be able to change the price of each episode/movie item.
+Requirements:
+- Each episode or item can have its own price.
+- Price must be editable from the admin dashboard.
+- Price changes must reflect immediately in the user flow.
+- Show prices clearly in both admin and buyer screens.
+- Store currency in VND.
+
+7) Data Persistence
+Use a proper persistent storage solution such as SQLite, PostgreSQL, or a clean database abstraction.
+Store:
+- movies
+- episodes
+- button labels
+- descriptions
+- videos/media file_ids
+- prices
+- purchase history
+- user statistics
+- admin change logs if possible
+
+Do not rely on hardcoded values in the code for content that should be editable.
+
+8) Purchase Flow
+Keep the current user experience familiar:
+- Users can browse movies.
+- They can press a movie button.
+- They can see the movie detail / buy screen.
+- They can buy the item.
+- The purchase flow should still be fast and simple.
+
+But now the content behind that flow must be fully configurable by admin.
+
+9) Scalability
+Design the system so it can handle:
+- many movies
+- many episodes per movie
+- frequent updates
+- future categories or labels
+- future admin features
+
+Avoid any architecture that will break when the catalog becomes large.
+
+10) Code Quality and Safety
+- Write clean, modular, maintainable code.
+- Separate handlers, services, storage, and admin logic.
+- Add validation for admin inputs.
+- Prevent invalid price values, broken media references, or empty labels.
+- Use secure access checks for all admin actions.
+- Add helpful comments where needed.
+- Preserve existing features unless they conflict with the new requirements.
+- Do not make the UI cluttered.
+
+11) Recommended Admin UX
+The admin panel should include sections like:
+- Dashboard
+- Movies
+- Episodes / Items
+- Prices
+- Text Content
+- Media / Videos
+- Sales Analytics
+- Users / Orders
+- Back / Home
+
+Use inline keyboard navigation and pagination if the list is long.
+
+12) Implementation Expectations
+Please produce the full implementation, not just a plan.
+I want:
+- the updated bot code
+- the admin panel logic
+- storage/schema updates
+- callback/query handlers
+- utility functions
+- any necessary migration or initialization code
+
+If a database schema is needed, define it clearly.
+If environment variables are needed, list them.
+If any assumptions are required, state them briefly before coding.
+
+13) Output Requirements
+- Return the complete updated code.
+- Keep the code runnable.
+- Do not leave core features half-finished.
+- Make sure admin-only access is enforced properly.
+- Make sure dynamic content changes work immediately.
+- Make sure the system remains stable after edits.
+
+TECHNICAL NOTE
+I want the solution to be practical and production-oriented, not a toy example.
+Prioritize maintainability, reliability, and easy future updates.
+```
+
+Đầy tớ cũng có thể viết tiếp cho Bệ Hạ một bản **prompt ngắn hơn, sắc hơn kiểu senior dev** để dán vào AI code review/code generator cho gọn và mạnh hơn.
